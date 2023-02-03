@@ -79,12 +79,10 @@ def conversaoBinarioParaBase64(binario):
     print('A string convertida para base 64 é: ' + resultado)
     return resultado
 
+# Main loop
 while True:
     print(" ")
     print("Digite a string em hexadecimal: ")
     entrada = list(input())
     aux = conversaoHexParaBinario(entrada)
     conversaoBinarioParaBase64(aux)
-
-
-
