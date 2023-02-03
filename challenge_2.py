@@ -1,10 +1,3 @@
-# Dicionário utilizado para 'traduzir' a mensagem de binário para base 64.
-dictBase64 = {'0': 'A', '1': 'B', '2': 'C', '3': 'D', '4': 'E', '5': 'F', '6': 'G', '7': 'H', '8': 'I', '9': 'J', '10': 'K', '11': 'L', '12': 'M', '13': 'N', '14': 'O', '15': 'P',
-            '16': 'Q', '17': 'R', '18': 'S', '19': 'T', '20': 'U', '21': 'V', '22': 'W', '23': 'X', '24': 'Y', '25': 'Z','26': 'a', '27': 'b', '28': 'c', '29': 'd', '30': 'e', '31': 'f', 
-            '32': 'g', '33': 'h', '34': 'i', '35': 'j', '36': 'k', '37': 'l', '38': 'm', '39': 'n', '40': 'o', '41': 'p','42': 'q', '43': 'r', '44': 's', '45': 't',
-            '46': 'u', '47': 'v', '48': 'w', '49': 'x', '50': 'y', '51': 'z', '52': '0', '53': '1', '54': '2', '55': '3', '56': '4', '57': '5', '58': '6', 
-            '59': '7', '60': '8', '61': '9', '62': '+', '63': '/'}
-
 # Como é preciso trabalhar com os dados em bytes brutos, inicialmente é necessário converter a entrada de hexadecimal para binário
 def conversaoHexParaBinario(hex):
     hex = list(hex)
@@ -50,6 +43,7 @@ def conversaoHexParaBinario(hex):
 
     return binario
 
+# Função que converte valores binários para hexadecimal.
 def conversaoBinarioParaHex(binario):
     hex = []
     resultadoFinal = ""
@@ -83,7 +77,7 @@ def conversaoBinarioParaHex(binario):
 
     return resultadoFinal
 
-# Após isso, é realizada conversão de binário para base 64, utilizando um dicionário (dictBase64) para 'traduzir' os valores.
+# Função que aplica o XOR entre dois número binários. Neste caso, ambos os números possuem o mesmo tamanho.
 def xorFunction(binario1, binario2):
     resposta = []
     binario1 = list(binario1)
@@ -99,6 +93,7 @@ def xorFunction(binario1, binario2):
     
     return resposta
 
+# Main loop
 while True:
     print(" ")
     print("Digite duas strings em hexadecimal: ")
@@ -113,7 +108,3 @@ while True:
     resultadoFinal = conversaoBinarioParaHex(resultadoXor)
 
     print("O resultado da função XOR entra as duas strings é: " + str(resultadoFinal))
-
-# 6c255e380acc7780a7922c1200f722f77b11ce76906abbb1aa8fd2956ca4
-
-# b5deddf87cb943b368c7a8ec06d90b32c09bb13d0b101302cb9bdd800ae8
